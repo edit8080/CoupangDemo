@@ -1,6 +1,8 @@
 body {
   margin: 0;
   font-size: 14px;
+  width: 100%;
+  overflow: auto;
 }
 ul {
   list-style: none;
@@ -23,12 +25,11 @@ h5 {
 }
 
 #wrapper {
-  width: 1260px;
-  margin: 0 auto;
+  width: 1000px;
 }
-@media screen and (max-width: 1300px) {
+@media screen and (min-width: 1000px) {
   #wrapper {
-    width: 1000px;
+    width: 1260px;
     margin: 0 auto;
   }
 }
@@ -145,7 +146,7 @@ h5 {
 .searchArea {
   width: 56%;
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1000px) {
   .searchArea {
     width: 48%;
   }
@@ -179,7 +180,7 @@ h5 {
 .searchArea input {
   width: 70%;
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1000px) {
   .searchArea input {
     width: 55%;
   }
@@ -284,7 +285,7 @@ h5 {
 }
 .headmenubar {
   position: relative;
-  width: auto;
+  width: 900px;
   height: 28px;
   top: 85px;
   left: 110px;
@@ -330,10 +331,11 @@ h5 {
   line-height: 30px;
   padding-left: 20px;
 }
-.mainBody {
+#section {
   position: relative;
   display: block;
   width: auto;
+  margin-bottom: 200px;
 }
 .searchFilter {
   position: relative;
@@ -463,7 +465,7 @@ h5 {
   padding: 0;
   width: 260px;
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1000px) {
   .bannerList {
     display: none;
   }
@@ -496,7 +498,7 @@ h5 {
   position: 0;
   text-align: center;
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1000px) {
   .bannerListControl {
     display: none;
   }
@@ -540,7 +542,7 @@ h5 {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 250px);
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1000px) {
   .category {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 250px);
@@ -658,11 +660,108 @@ h5 {
 }
 .productList {
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(6, 457px);
+  grid-template-rows: repeat(3, 460px);
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1000px) {
   .productList {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(8, 457px);
+    grid-template-rows: repeat(4, 460px);
   }
+}
+.productDescription {
+  margin: 0;
+  margin-top: 25px;
+  padding: 0 5px;
+  width: 222px;
+  line-height: 120%;
+}
+.basePrice {
+  font-size: 12px;
+  text-decoration: line-through;
+  padding: 0 5px;
+  color: gray;
+}
+.priceValue {
+  font-size: 18px;
+  color: #ae0000;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.unitPrice {
+  font-size: 12px;
+  color: #ae0000;
+  margin: 5px 0;
+}
+.deliveryDay {
+  padding-top: 5px;
+  color: #00891a;
+}
+.productScore {
+  background: url(product/product_sprite.png) no-repeat 0 -149px;
+  width: 70px;
+  height: 14px;
+  float: left;
+}
+.rating {
+  background: url(product/product_sprite.png) no-repeat 0 -199px;
+  height: 14px;
+  overflow: hidden;
+  float: left;
+}
+.productbenefit {
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+}
+.pageList {
+  margin-top: 30px;
+  height: 31px;
+  text-align: center;
+  display: inline-block;
+}
+
+.pageControl {
+  display: inline-block;
+  z-index: 10px;
+  width: 31px;
+  height: 31px;
+  line-height: 31px;
+  background-image: url(ico_pageControl.png);
+  background-repeat: no-repeat;
+}
+.pageControl:hover {
+  text-decoration: none;
+}
+.pageNum {
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  line-height: 29px;
+  font-weight: bold;
+}
+.pageNum:hover {
+  color: red;
+}
+#footer {
+  display: block;
+  position: relative;
+  border-top: 2px solid rgb(204, 204, 204);
+  width: 100%;
+  margin: 0;
+}
+.footer_layer1 {
+  text-align: center;
+  padding: 10px 0px;
+  border-bottom: 1px solid rgb(230, 230, 230);
+}
+.footer_layer1 a {
+  display: inline-block;
+  padding: 0 10px 0 4px;
+  border-right: 1px solid gray;
+}
+.footer_layer2 {
+  margin: 30px auto;
+  height: 100px;
 }
