@@ -660,13 +660,26 @@ h5 {
 }
 .productList {
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 460px);
+  grid-template-rows: repeat(3, 480px);
 }
 @media screen and (max-width: 1000px) {
   .productList {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 460px);
   }
+}
+.productItem {
+  padding: 10px;
+  cursor: pointer;
+}
+.productItem:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.2s ease;
+}
+.productItem:hover .productName {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
 }
 .productDescription {
   margin: 0;
@@ -675,6 +688,7 @@ h5 {
   width: 222px;
   line-height: 120%;
 }
+
 .basePrice {
   font-size: 12px;
   text-decoration: line-through;
@@ -754,14 +768,94 @@ h5 {
 .footer_layer1 {
   text-align: center;
   padding: 10px 0px;
-  border-bottom: 1px solid rgb(230, 230, 230);
+  border-bottom: 1px solid rgb(194, 194, 194);
 }
 .footer_layer1 a {
   display: inline-block;
-  padding: 0 10px 0 4px;
+  padding: 0 8px 0 4px;
   border-right: 1px solid gray;
+  color: black;
+  text-decoration: none;
 }
 .footer_layer2 {
   margin: 30px auto;
   height: 100px;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+}
+.coupang-logo {
+  background: url(footer/footer_sprite.png) no-repeat -19px -34px;
+  width: 117px;
+  height: 34px;
+  cursor: pointer;
+}
+.address {
+  width: 260px;
+  margin: 0 10px;
+}
+.address p,
+.contact-info p,
+.safe-service p,
+.coupang-copyright p {
+  margin: 2px;
+}
+.address a {
+  color: black;
+  text-decoration: underline;
+}
+.contact-info {
+  width: 270px;
+  margin: 0 10px;
+}
+.safe-service {
+  width: 260px;
+  margin: 0 10px;
+}
+.safe-service a {
+  color: black;
+  text-decoration: underline;
+}
+.footer_layer3 {
+  margin: 0 auto;
+  height: 80px;
+  border-top: 1px solid rgb(180, 180, 180);
+  display: flex;
+  justify-content: center;
+}
+.awardList {
+  background-image: url(footer/footer_sprite.png);
+  background-repeat: no-repeat;
+  width: 190px;
+  height: 55px;
+  margin-top: 15px;
+}
+.footer_layer4 {
+  height: 90px;
+  background: #333;
+  display: flex;
+  align-items: center;
+}
+.coupang-copyright {
+  width: 850px;
+  height: 80px;
+  margin: 0;
+}
+.coupang-copyright p {
+  margin-left: 15px;
+  font-size: 10px;
+  color: #888;
+}
+.coupang-snsList {
+  margin-left: auto;
+  display: flex;
+  margin-right: 20px;
+}
+.coupang-sns {
+  background-image: url(footer/footer_sprite.png);
+  background-repeat: no-repeat;
+  width: 34px;
+  height: 34px;
+  margin-right: 10px;
+  cursor: pointer;
 }
